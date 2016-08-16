@@ -1,0 +1,568 @@
+2014-09-15  Dave Goel  <deego3@gmail.com>
+
+	* erbc.el (fsi-merge-generic): don't merge if a redirect exists.
+	Provide sleep-for breakpoints for redirect-loops.
+
+2014-08-20  Dave Goel  <deego3@gmail.com>
+
+	* erbc6.el (fs-emacs-uptime): new
+
+2014-07-07  Dave Goel  <deego3@gmail.com>
+
+	* erbc3.el (fsi-defun): Prompt for a fmakunbound prior to a redefun.
+
+	* erbc.el (fsi-forget): Improve. Also, provide a new functionality "last."
+
+2014-06-26  Dave Goel  <deego3@gmail.com>
+
+	* erbutils.el (erbutils-itemize): Improve greatly. Report total number of entries when large, etc. 
+
+2014-06-25  Dave Goel  <deego3@gmail.com>
+
+	* erbutils.el (erbutils-stringifyc): new
+	
+
+2014-06-22  Dave Goel  <deego3@gmail.com>
+
+	* erbc6.el (fsi-whine): New.
+	(fsi-whine): remove.
+
+2014-06-20  Dave Goel  <deego3@gmail.com>
+
+	* erbc6.el: Add a bunch of functionality to compare charsets such as dvorak and qwerty.
+
+	* erbc.el (fsi-lispify): improve ,, .. ,, parsing.
+
+	* erbutils.el (erbutils-stringifyb): new.
+
+2014-06-19  Dave Goel  <deego3@gmail.com>
+
+	* erbc.el (fsi-describe-from-english): escape ` when english.
+
+2014-06-18  Free Software Bot  <fsbot@pepperfish.net>
+
+	* erbot.el (erbot-dunnet-install): comment out alias for dun-read-line.
+	(erbot-dunnet-install): redefun dun-type.
+
+2014-06-18  Dave Goel  <deego3@gmail.com>
+
+	* erbc.el (fsi-dunnet-mode): improve so that restarting dunnet mode does the same thing.
+	(fsi-unfill-string): new
+
+2014-06-15  deego
+
+	* erbutils.el (erbutils-eval-until-limited): improve, add a overflow.
+
+2014-06-15  deego <deego3@gmail.com>
+
+	* erbc6.el: allow some rx's
+
+2014-05-17  deego <deego3@gmail.com>
+
+	* fact.el: New.
+	* erbc5.el: hooks for the new fact.el
+	* erball.el: ditto.
+
+
+	* fact.el: New.
+2014-05-03  Dave Goel  <deego3@gmail.com>
+
+	* minor grammar fixes throughout.
+
+	* erbc.el (fsi-describe-from-english): better error message.
+	(fsi-commands): grammar in error message.
+
+2014-05-03  deego  <deego3@gmail.com>
+
+	* erbc.el (fsi-set-term): Better description for a newly 'created' message.
+
+2012-06-25  deego
+
+	* erbim.el (erbim-where-is-char): Namespace.
+	(erbim-where-is-char): Ditto.
+	(erbim-where-is-composed-char-file): Ditto.
+
+2007-12-06  D. Goel  <deego3@gmail.com>
+
+	* erbc.el (fsi-replace-regexp): fix call to `error'.
+	(fsi-merge-generic): Ditto.	
+	(fsi-mv): "
+	(fsi-replace-string): "
+	and many other functions and files: Ditto.
+	
+2007-11-23  Dave Goel  <deego@gnufans.org>
+
+	* COPYING: Replace by GPL v. 3
+
+	* erbot.el and all other files: Change GPL v. 2 to 3.
+
+2007-07-22  Michael Olson  <mwolson@gnu.org>
+
+	* README.txt: Mention examples/dotemacs-mybot.
+
+	* examples/dotemacs-mybot: New file that is the example .emacs for
+	the bot.
+
+2007-07-19  Michael Olson  <mwolson@gnu.org>
+
+	* erbot.el (erbot-reply): Don't force the message through without
+	flood protection.  Since ERC 5.1, ERC has very good flood
+	protection, so make use of it.
+
+2007-04-11  Vivek Dasmohapatra  <vivek@etla.org>
+
+	* erbim.el (fs-unicode-describe): add usage instructions 
+	(erbim-search-by-description): search for unicode characters by 
+	description.
+	(fs-unicode-find): bot-ui wrapper for erbim-search-by-description
+	including usage message.
+	(erbim-name-by-codepoint): changed output format to use #xXXX
+
+2007-01-28  Vivek Dasmohapatra  <vivek@etla.org>
+
+	* erbot.el (erbot-join-servers): `erc' takes :keyword style
+	parameters in emacs22, the old argument list no longer works.
+	Work out which erc version we're using and alter the call
+	appropriately.
+
+2007-01-27  Vivek Dasmohapatra  <vivek@etla.org>
+
+	* erbutils.el (erbutils-describe-variable): help-button-xref
+	has changed in emacs22, make this function work with it.
+
+2006-11-28  Michael Olson  <mwolson@gnu.org>
+
+	* erbot.el (erbot-join-servers): Make this work with the ERC
+	development branch.
+
+2006-09-28  D Goel  <deego@gnufans.org>
+
+	* erbc.el (fsi-describe-from-english): smarter self search
+	(fsi-generalize-search-term): new, for above.
+
+2006-08-21  Michael Olson  <mwolson@gnu.org>
+
+	* erbot.el (erbot-install): Remove check for erc-backend-version,
+	since it no longer exists.  Use featurep instead.  This fixes a
+	failure to join channels issue with the ERC development branch.
+
+2006-05-18  Vivek Dasmohapatra  <vivek@etla.org>
+
+	* erbtranslate.el (fsi-translate): If we can't make sense 
+	of the call (not enough arguments) emit a usage message.
+
+2006-05-17  Michael Olson  <mwolson@gnu.org>
+
+	* contrib/translate.el (translate-load-pairs): Docfix.
+
+	* erbtranslate.el (fsi-translate-list-services): Use
+	translate-program, not erbn-translate-program, since the latter
+	does not exist.
+
+2006-05-12  Vivek Dasmohapatra  <vivek@etla.org>
+
+	* contrib/translate.el: the symbol -> string coercion is not 
+	required for arguments to translate.el, that's something
+	specific to user-visible erbot functions.
+
+	* erbtranslate.el: most translation code moved to translate.el
+	fsi-translate-web-page temporarily disabled till I've tested
+	it a bit more and made the implementation a little smarter
+	than it currently is. (It should check ti see if a web page 
+	service is actualy available)
+
+2006-05-10  D Goel  <deego@gnufans.org>
+
+	* erbtranslate.el: update authors
+
+2006-05-10  Vivek Dasmohapatra  <vivek@etla.org>
+
+	* erbtranslate.el (fsi-translate-list-pairs): destination language
+	should also be searched for with a case insensitive predicate.
+
+2006-05-09  D Goel  <deego@gnufans.org>
+
+	* erbtranslate.el: update authors
+
+2006-05-09  Vivek Dasmohapatra  <vivek@etla.org>
+
+	* erbtranslate.el (fsi-translate-list-pairs): improved help, return
+	more information when < N pairs, where N is currently 20. (Always 
+	return full list if both origin and destination are both supplied)
+	(erbtranslate-full-name): returns a "full name" for a language,
+	consisting of all its human-readable aliases.
+	(erbtranslate-unsupported-langs): list of languages emacs can't utf-8
+	encode yet.
+	(fsi-translate): abort for non-unicodable languages like Arabic and 
+	Hebrew.
+	(fsi-translate): Use full names of languages in error messages.
+	(fsi-translate-list-pairs): Use full names of languages in messages.
+
+2006-05-08  Vivek Dasmohapatra  <vivek@etla.org>
+
+	* erbtranslate.el (erbtranslate-parse-pair): parse the output of
+	erbn-translate-program --list-pairs.
+	(erbtranslate-load-pairs): load the map of available translations.
+	(fsi-translate-list-pairs): Alter this function so that it only lists
+	possible translations when both an origin and a destination language
+	have been specified. Otherwise just tells the user how many matching
+	language pairs there are.
+	(fsi-translate-list-pairs): coerce the arguments into strings first.
+	(erbtranslate-parse-pair): some (one?) language codes are 3 letter.
+	I thought this was non-canonical but that's what translate returns,
+	so we must support it.
+	(erbtranslate-parse-pair): tidy up error message
+	(erbtranslate-req-to-pair): new. take the (possibly non-canonical)
+	language names from the user and map them to the canonical language
+	codes that translate expects.
+	(fsi-translate): map human-friendly language names in translation 
+	request to canonical language codes.
+	(fsi-translate): use the coerced-strings, not the raw language args.
+
+2006-05-08  D Goel  <deego@gnufans.org>
+
+	* erbtranslate.el (erbn-translate-program): new.  Make the program customizeable.
+	
+
+	* contrib/shs.el: New shs.el, cleans up temporary files.
+
+2006-04-24  D Goel  <deego@gnufans.org>
+
+	* erbtranslate.el: DECLARE SAFE. Uses call-process now.
+
+	* erball.el: require erbtranslate.
+
+	* erbutils.el (erbutils-enabled-check): new function.  
+
+	* erbtranslate.el: revamp the file to make it secure, not yet final.
+
+2006-04-20  D Goel  <deego@gnufans.org>
+
+	* erbot.el (erbot-safe-p): Improve this function a bit.
+	(erbot-safe-nocontrol-p): new.
+
+	* erbot-lispy.el (erbot-lispy-safe-p): change name from erbot-lispy-safep
+
+	* erbot.el (erbot-safe-p): change name from erbot-safep
+
+	* erbc.el (erbn-url-functions-p): new variable.  Disallow url's
+	unless enabled here.  Else potential freeze.
+	(erbn-internal-web-page-time): rename from the one below.
+	(fs-internal-web-page-time): rename to the one above
+	(erbn-url-functions-p): add bug discoverer's name in docstring.
+	(fsi-get-more-invocation-string): new function.
+	(fsi-limit-lines): Make the bot spit something useful instead of
+	,more, when using weird erbn-char.
+
+2006-04-19  D Goel  <deego@gnufans.org>
+
+	* erbtranslate.el: fix minor doc typo
+
+2006-04-17  D Goel  <deego@gnufans.org>
+
+	* erbtranslate.el: adapted from indio's myerc.el.  Work in
+	progress. INSECURE.  DO NOT USE THIS FILE.
+
+2006-04-07  D Goel  <deego@gnufans.org>
+
+	* erbot.el (erbot-safe-make): Exception to control characters:
+	Allow \t
+
+2006-03-21  D Goel  <deego@gnufans.org>
+
+	* erbot.el (erbot-safe-make): new function.
+	(erbot-reply): call erbot-safe-make before replying.
+
+2006-02-28  Michael Olson  <mwolson@gnu.org>
+
+	* ChangeLog: Remove use of CVS Revision tag.
+
+2006-02-27  D Goel  <deego@gnufans.org>
+
+	* erbc2.el (fs-apply): SECURITY FIX!  Also, disable when
+	paranoid.  Ditto for funcall.
+
+	* erbot.el (erbot-paranoid-p): Make this new variable a catchall
+	for security. t by default.  No enablings like erbot-setf-p,
+	etc. will work unless this is non-nil. If this is non-nil, erbot
+	is paranoid, it will not allow apply, setf, funcall, sregex,
+	etc. even if the corresponding variables are turned on.
+
+2006-02-26  Michael Olson  <mwolson@gnu.org>
+
+	* erbc.el (fs-flame): Concat multiple arguments together to form
+	the flame target, unless there are only 2 arguments and the last
+	one is a number.  In that case, we pick the specified flame.
+
+2006-01-10  D Goel  <deego@gnufans.org>
+
+	* erbc5.el (symbol-name): minor: provide this fs-function.
+
+
+2006-01-05  Michael Olson  <mwolson@gnu.org>
+
+	* README.txt (NOTE): Add directions for getting the units file for
+	contrib/units.el.
+
+	* contrib/units.el: Newly-added file that is recommended on the
+	ErbotInstallation page of emacswiki.org.
+
+
+2006-01-01  D Goel  <deego@gnufans.org>
+
+	* erblisp.el (erblisp-check-args): Promote to a macro.  This macro
+	first removes any arguments that can't be evalled. This happens,
+	when, for example, the user-defined function contained &optional,
+	&rest, etc.
+
+	* erbot.el (erbot-remote): erc-coding-system-for-target was not
+	defined for older versions of erc.
+
+2005-12-31  Vivek Dasmohapatra  <vivek@etla.org>
+
+	* erbmsg.el (fs-memo): if a memo command was not recognised,
+	emit an error so we know it happened.
+	(fs-memos): If someone had no memos, return the help-memo
+	text too - makes it easier for people to figure out how it
+	all works.
+
+2005-12-30  Vivek Dasmohapatra  <vivek@etla.org>
+
+	* erbot.el (erbot-remote): Decode the incoming data properly
+	paying attention to erc's inbound coding system.
+	(erbot-reply): Now that the inbound data is (hopefully) cleanly
+	decoded we shouldn't need to force the outbound coding.
+	In emacs21, mule-ucs may be required for this to work.
+
+2005-11-10  D Goel  <deego@gnufans.org>
+
+	* erbot.el (erbot-safep): Make a minor change, to try to render
+	this function live up to its name: make it deem any newlines
+	unsafe.  Because of the way the engine works, this change has no
+	effect on erbot at this time.
+	(erbot-safep): minor correction to last change.
+
+2005-11-09  Michael Olson  <mwolson@gnu.org>
+
+	* erbot.el (erbot-reply): Make erbot-safep check each line of the
+	split reply.  Split the string on both \n and \r.  Together, this
+	fixes an exploit in user-defined functions, which involved
+	returning a string like "^Mquit".
+
+2005-11-08  Michael Olson  <mwolson@gnu.org>
+
+	* erblisp.el (erblisp-max-list-length): New option that determines
+	how long a sand-boxed list or expression may be.
+	(erblisp-safe-length): New function that checks the given list to
+	make sure it isn't too long.  It's able to handle nested lists as
+	well.
+	(erblisp-check-args): New function that calls erblisp-safe-length
+	with the correct args.
+	(erblisp-sandbox): Use erblisp-check-args.
+
+	* erbc3.el (fsi-defun): Add erblisp-check-args invocation to each
+	newly-created user function.
+
+2005-10-12  Michael Olson  <mwolson@gnu.org>
+
+	* erbot.el (erbot-join-servers): Use fboundp check;
+	erc-compute-port is a function.
+
+2005-10-05  D Goel  <deego@gnufans.org>
+
+	* erbot.el (erbot-join-servers): `erc-compute-port' seems to be
+	undefined for my older ERC (4.0).  So, I
+	reverted to old behavior when it is undefined.  Did I do it right?
+
+2005-10-05  Michael Olson  <mwolson@gnu.org>
+
+	* erbot.el (erbot-join-servers): Call `erc-compute-port' instead
+	of using the value of `erc-port', since by default erc-port is
+	nil.
+
+2005-09-02  D Goel  <deego@gnufans.org>
+
+	* .*.el: Get rid of all string properties everywhere, especially
+	right at the source, for extra security.
+
+	* erbc.el (fsi-read): minor: read-> read-from-string for more
+	safety
+	(erbn-read): new
+	(fsi-read-from-string): new
+	(fsi-describe-variable): use erbn-read for safety
+	(fsi-require): ditto
+
+	* erbbdb.el (erbbdb-add): ditto
+
+2005-08-31  D Goel  <deego@gnufans.org>
+
+	* erbot.el (erbot-nickserv-p): Add auto-identify code, also enable
+	by default, see doc for erbot-nickserv-p for how to make changes
+	to your bot's .emacs.  This is now required by freenode for
+	privmsgs to work.
+	(erbot-nickserv-p): Unde default behavior change.  The default
+	behavior of erbot remains as xbefore: to *not*idontify by
+	default.
+
+2005-08-28  Michael Olson  <mwolson@gnu.org>
+
+	* contrib/wtf.el: Add to copyright notice.
+	(wtf-alist): Move FTBFS to the "Additional terms go here" section.
+
+2005-08-22  Jose E. Marchesi  <jemarch@gnu.org>
+
+	* contrib/haiku.el (fs-haiku): New file
+
+2005-08-16  D Goel  <deego@gnufans.org>
+
+	* contrib/wtf.el (wtf-alist): add ("FTBFS" . "failure to build from source")
+
+2005-08-15  Michael Olson  <mwolson@gnu.org>
+
+	* contrib/wtf.el: I received permission to receive these terms in
+	the public domain.
+	(wtf-alist): Add "TWAT".
+	(wtf-is): Fix Emacs21 issue.
+
+2005-08-11  Michael Olson  <mwolson@gnu.org>
+
+	* contrib/wtf.el (wtf-match-string-no-properties): New function
+	that is like match-string-no-properties, but works when that
+	function is not defined.
+	(wtf-get-term-at-point): New function that looks for term at
+	point.
+	(wtf-is): Make use of `wtf-get-term-at-point'.
+
+	* Makefile (clean realclean distclean fullclean): Remove *~ files
+	in contrib directory.
+
+2005-07-09  Michael Olson  <mwolson@gnu.org>
+
+	* erball.el: Make sure that the user knows if bbdb cannot be
+	found.  Otherwise they will get a non-working bot!
+	(erball-compilation-paths): Add path to BBDB.
+
+2005-07-02  Michael Olson  <mwolson@gnu.org>
+
+	* erball.el (erball-compiling-p): Use a custom routine instead of
+	`assoc' to detect "--compile-erbot" since the latter does not seem
+	to work on Emacs 22.
+
+2005-07-01  Michael Olson  <mwolson@gnu.org>
+
+	* erball.el (erball-compilation-paths-rel-to): New variable
+	populated by `--paths-rel-to ARG' on the emacs command line,
+	taking the value of ARG.
+	(erball-compiling-p): New variable that is non-nil when
+	`--compile-erbot' is included on the emacs command line.  This is
+	used to indicate that we want to compile erbot from a Makefile.
+	(erball-compilation-paths): Elements to add to load-path when the
+	compilation flag, erball-compiling-p, is set.
+	(erball-files): Automatically populate this if erball-compiling-p
+	is set.
+	(erball-compile): If erball-compiling-p is set, use a simpler
+	routine.
+
+	* Makefile: New file that allows erbot to be compiled and
+	installed.  Edit the top of the file to indicate where to find
+	emacs and where to install the files.
+
+	* README.txt (URL): Add brief mention of how to compile and
+	install erbot.
+
+2005-06-09  Michael Olson  <mwolson@gnu.org>
+
+	* contrib/wtf.el: New file that contains a list of acronyms in
+	`wtf-alist' and the `wtf-is' command to look up a definition.
+
+	* erbtrain.el (erbtrain-utils-teach-acronyms): Use `wtf.el' to
+	teach the given bot some common acronyms.
+
+2005-04-28  D Goel  <deego@gnufans.org>
+
+	* erbc3.el (fsi-pf-load): Make this error msg more informative. 
+
+	* erbc5.el (fsi-ignore-errors-else-string): new. 
+
+2005-04-01  D Goel  <deego@gnufans.org>
+
+	* erbc4.el (fsi-kick): Move from erbc.el to here. 
+	
+
+2005-04-01  Michael Olson  <mwolson@gnu.org>
+
+	* erbot.el (erbot-doctor): Create separate doctor sessions for
+	each channel or query buffer so that responses make sense to the
+	user.
+
+2005-02-21  S Freundt  <hroptatyr@gna.org>
+
+	* erbmsg.el: (erbmsg-notify-msg-on-JOIN) [fix] add function set-alist for
+	compatibility to FSF emacsen
+
+2004-07-26  S Freundt  <hroptatyr@gna.org>
+
+	* erbmsg.el: (erbmsg-notify-msg-on-JOIN)
+	- fixed bug with last-access used for the first time
+
+2004-06-26  S Freundt  <hroptatyr@gna.org>
+
+	* erbmsg.el: 
+	- added dump routines to dump message hash tables to hard disk
+	- added routines for restoring from dumped message files
+	- added interval within erbot does not notify on channel joins
+	- added erbmsg-new-msg-(pre|post)-hook
+
+2004-06-13  S Freundt  <hroptatyr@gna.org>
+
+	* erbot.el: added new var erbot-on-new-erc-p 
+	and handlers for new erc-backend facilities.
+
+	erc versions >1.660 use erc-backend.el to handle server
+	events. erbot is now aware of these new handlers by
+	determining the value `erbot-on-new-erc-p' when calling
+	`erbot-install'.
+	The new backend handlers' values are evaluated within
+	`erbot-remote' fun.
+
+2004-05-07  D Goel  <deego@gnufans.org>
+
+	* erbwiki.el: Security, add new functions. 
+
+	USING LINES < 0.3 FOR WIKI TRAINING WAS A SECURITY RISK, WE
+	THINK.. THOUGH WE HAVEN'T FIGURED OUT HOW TO EXPLOIT IT.
+	lines 0.3 and later fix that risk.
+
+	Also add new functions to erbwiki.el suitable for parsing more
+	wikis.
+	
+
+2004-04-06  D Goel  <deego@gnufans.org>
+
+	* erbc.el (fs-kick): Kicking syntax different?  remove nil?
+
+2004-03-28  D Goel  <deego@gnufans.org>
+
+	* erbcompat.el: name Sebastian as the author :)
+
+	* erbwiki.el (erbwiki-get-fields): remove '... since not
+	recognized by xemacs
+
+2004-03-22  D Goel  <deego@gnufans.org>
+
+	* erball.el (noninteractive): dunnet should be required only for
+	noninteractive, else it starts a session!
+
+2004-03-21  D Goel  <deego@gnufans.org>
+
+	* erbc3.el: Redefine and move fs-setq here. 
+	(fs-defun): This function was defined twice. Remove the first
+	definition. 
+
+	* erbc.el (fs-find-variable-internal): add cosmetic space. 
+	(obarray): redefine and mv fs-setq to erbc3
+
+2003-12-30  D Goel  <deego@gnufans.org>
+
+	* erbc.el (reverse): add fs-reverse
+

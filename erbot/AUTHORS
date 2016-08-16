@@ -1,0 +1,63 @@
+LICENSE: Erbot by Dave Goel and others is licensed under GNU GPLv3.
+----
+
+AUTHORS, CONTRIBUTORS AND MAINTAINERS:
+
+Primary author:
+ Dave Goel (deego) <deego3@gmail.com>: 
+      	   	   Author, designer and maintainer of erbot and fsbot.
+      	   	   The vast majority of erbot; continued maintenance; integration of foreign libraries.
+		   (All libraries in the code with no listed author are authored by Dave Goel.)
+
+
+Other Contributors, alphabetically:
+      (This list also includes several members of freenode/#emacs whose comments influenced erbot's behavior.)
+
+ Alejandro Benitez               <benitezalejandrogm@gmail.com>
+ 	   	    Original version of erbtranslate.
+
+ Alex Schroeder     (kensanata). 
+
+ Brian Templeton    (bpt) 
+
+ Damien Elmes       (resolve)
+ 		    Idea for ,, invocation of fsbot.
+
+ David Edmunston    <dme@dme.org>
+       		    Erobot.el on which erbot's irc interface is based.
+		 
+ Dheeraj Buduru     (dbuduru)
+
+ Enrico Bandiera
+
+ Grant Bowman       (grantbow) 
+
+ J. Michael Dupont  (mdupont) 
+
+ Jorgen Schaefer    (forcer) 
+
+ Lawrence Mitchell  (lawrence)
+
+ Luis Fernandes     (e1f) 
+
+ Mario Lang         (delYsid) 
+
+ Michael Olson      (mwolson)    <mwolson@gnu.org>
+ 	 	    Makefile. (It is not functional atm.)
+
+ Sebastian Freundt  (hroptatyr)  <freundt@math.TU-Berlin.DE> :
+ 	   	    Memoserv support in erbot. erbcompat. 
+ 	   	    
+ Jose E Marchesi    (jemarch) 
+ 	 	    
+ Pete Kazmier       (pkazmier)
+      		    erbjavadoc (not functional atm.)
+
+ Taylor R Campbell  (riastradh)
+ 	  	    Russian roulette functions.
+
+ Vivek Dasmohapatra (fledermaus) <vivek@etla.org>
+       		    Internationalization support in erbot. Also provided a host for fsbot for several years. 
+
+ Yann Hodique       (sigma) 
+

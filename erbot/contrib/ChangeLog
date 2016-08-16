@@ -1,0 +1,18 @@
+2014-06-30  Dave Goel  <deego3@gmail.com>
+
+	* faith.el: Remove multiple faith.el's. One was in emacs/emacspub... /. Merge the two, and rename the surviving version (the one here) to version 2.1.
+	Make faith-fill-column actually work!
+
+2014-06-24  Dave Goel  <deego3@gmail.com>
+
+	* faith.el (faith-false-quotes): delete a quote.
+
+2014-06-22  Dave Goel  <deego3@gmail.com>
+
+	* whine.el: remove.
+	* whine.el: add this file.
+
+2014-06-15  deego
+
+	* faith.el: make it actually respect faith-fill-column.
+
